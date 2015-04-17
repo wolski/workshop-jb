@@ -6,6 +6,7 @@ import org.junit.Assert
 
 class _03_Lambdas() {
     test fun contains() {
+        examples()
         Assert.assertTrue(task3(listOf(1, 2, 3, 126, 555)))
     }
 

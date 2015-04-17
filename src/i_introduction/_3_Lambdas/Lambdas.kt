@@ -11,9 +11,9 @@ fun examples() {
 
     fun apply(i: Int, f: (Int) -> Unit) = f(i)
 
-    apply(2, { x -> x + 25 })
+    val bla = apply(2, { x -> x + 25 })
     //you can omit round brackets if lambda is the last argument
-    apply(2) { x -> x + 25 }
+    val fla = apply(2) { x -> x + 25 }
 
     fun applyToStrangeArguments(f: (Int, Int) -> Int) = f(938, 241)
 
@@ -35,7 +35,7 @@ fun todoTask3(collection: Collection<Int>) = TODO(
     """,
     references = { JavaCode3().task3(collection) })
 
-fun task3(collection: Collection<Int>): Boolean = todoTask3(collection)
+fun task3(collection: Collection<Int>): Boolean = collection.any( {x -> x % 42 == 0} )
 
 
 
